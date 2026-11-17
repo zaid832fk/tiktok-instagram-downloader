@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="تحميل فيديوهات تيك توك وإنستغرام بدون علامة مائية بجودة عالية">
+  <meta name="robots" content="noindex, nofollow">
+  <title>تحميل فيديوهات تيك توك وإنستغرام بدون علامة مائية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="security-banner" class="security-banner">
+    <span class="security-icon">🔒</span>
+    <span class="security-text">اتصال آمن ومؤمن - محمي ضد جميع الثغرات المعروفة</span>
+    <button id="close-security" class="close-btn">×</button>
+  </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#000000"/>
+          <path d="M10 10L22 10L22 22L10 22L10 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>SaveVideo</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="nav-link active">الرئيسية</a>
+        <a href="#" class="nav-link">كيف تستخدم الموقع</a>
+        <a href="#" class="nav-link">الأمان والخصوصية</a>
+        <a href="#" class="nav-link">اتصل بنا</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>تحميل فيديوهات تيك توك وإنستغرام<br><span class="highlight">بدون علامة مائية</span></h1>
+        <p class="subtitle">أفضل أداة تحميل فيديوهات احترافية بجودة تختارها أنت، مع أقصى مستويات الأمان والحماية</p>
+        <div class="trust-indicators">
+          <div class="trust-item">
+            <span class="trust-icon">✅</span>
+            <span>بدون علامة مائية</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🎯</span>
+            <span>جودة قابلة للاختيار</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🔒</span>
+            <span>أمان بحمايةmultiple layers</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">⚡</span>
+            <span>تحميل فوري وآمن</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="downloader-section">
+      <div class="downloader-card">
+        <div class="card-header">
+          <h2>قم بتحميل الفيديو الخاص بك</h2>
+          <p>ألصق رابط الفيديو من تيك توك أو إنستغرام أدناه</p>
+        </div>
+        <form id="download-form" class="download-form">
+          <div class="form-group">
+            <label for="video-url">رابط الفيديو</label>
+            <div class="input-wrapper">
+              <input type="url" id="video-url" name="url" placeholder="https://www.tiktok.com/@user/video/1234567890" required maxlength="500" autocomplete="off">
+              <button type="button" id="paste-btn" class="paste-btn">لصق</button>
+            </div>
+            <div class="url-validation" id="url-validation"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="quality">الجودة</label>
+              <select id="quality" name="quality" class="form-select">
+                <option value="best">أفضل جودة متاحة</option>
+                <option value="1080p">1080p (Full HD)</option>
+                <option value="720p">720p (HD)</option>
+                <option value="480p">480p (SD)</option>
+                <option value="360p">360p (Low)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="format">الصيغة</label>
+              <select id="format" name="format" class="form-select">
+                <option value="mp4">MP4 (فيديو)</option>
+                <option value="webm">WEBM</option>
+                <option value="mp3">MP3 (صوت فقط)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" id="submit-btn" class="submit-btn">
+            <span class="btn-text">ابدأ التحميل</span>
+            <span class="btn-loading" style="display:none;"><span class="spinner"></span> جاري المعالجة...</span>
+          </button>
+        </form>
+        <div id="result-container" class="result-container hidden">
+          <div class="result-header">
+            <h3>الفيديو جاهز للتحميل</h3>
+            <span class="quality-badge" id="result-quality">جودة عالية</span>
+          </div>
+          <div class="result-preview" id="result-preview"></div>
+          <div class="result-info">
+            <div class="info-item"><span class="info-label">المنصة:</span><span class="info-value" id="result-platform">تيك توك / إنستغرام</span></div>
+            <div class="info-item"><span class="info-label">الصيغة:</span><span class="info-value" id="result-format">MP4</span></div>
+            <div class="info-item"><span class="info-label">الحجم:</span><span class="info-value" id="result-size">-- MB</span></div>
+            <div class="info-item"><span class="info-label">انتهاء صلاحية الرابط:</span><span class="info-value" id="result-expires">ساعة واحدة</span></div>
+          </div>
+          <div class="result-actions">
+            <button id="download-btn" class="download-primary-btn"><span>⬇️ تحميل الفيديو الآن</span></button>
+            <button id="download-new" class="download-secondary-btn">تحميل فيديو آخر</button>
+          </div>
+        </div>
+        <div id="error-container" class="error-container hidden">
+          <div class="error-icon">⚠️</div>
+          <h4 id="error-title">حدث خطأ</h4>
+          <p id="error-message"></p>
+          <button id="retry-btn" class="retry-btn">محاولة مرة أخرى</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="security-info">
+    <div class="container-inner">
+      <h2>لماذا موقعنا آمن؟</h2>
+      <div class="security-features">
+        <div class="feature">
+          <div class="feature-icon">🛡️</div>
+          <h3>حماية من XSS</h3>
+          <p>نقوم بتنظيف جميع مدخلات المستخدم لحماية الموقع من هجمات CSS الخبيثة</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🚫</div>
+          <h3>حماية من حقن قواعد البيانات</h3>
+          <p>جميع الاستفسارات مؤمنة ضد هجمات حقن SQL و NoSQL</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏱️</div>
+          <h3>تحديد معدل الطلبات</h3>
+          <p>نحن نحد من عدد الطلبات لمنع هجمات الحرمان من الخدمة (DDoS)</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔐</div>
+          <h3>تشفير البيانات</h3>
+          <p>جميع الاتصالات مشفرة باستخدام HTTPS وتtocols أمان حديثة</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📋</div>
+          <h3>سياسة خصوصية صارمة</h3>
+          <p>لا نقوم بتخزين فيديوهاتك أو مشاركتها مع أي طرف ثالث</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧹</div>
+          <h3>حذف تلقائي</h3>
+          <p>يتم حذف الملفات المحملة تلقائياً بعد ساعة واحدة لحماية خصوصيتك</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container-inner">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="#000000"/>
+              <path d="M10 10L22 10L22 22L10 22L10 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>SaveVideo</span>
+          </div>
+          <p>أفضل موقع لتحميل فيديوهات التواصل الاجتماعي بدون علامة مائية</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-group">
+            <h4>الروابط</h4>
+            <ul>
+              <li><a href="#">الرئيسية</a></li>
+              <li><a href="#">سياسة الخصوصية</a></li>
+              <li><a href="#">شروط الاستخدام</a></li>
+              <li><a href="#">اتصل بنا</a></li>
+            </ul>
+          </div>
+          <div class="footer-group">
+            <h4>الدعم</h4>
+            <ul>
+              <li><a href="#">مركز المساعدة</a></li>
+              <li><a href="#">إبلاغ عن مشكلة</a></li>
+              <li><a href="#">الأسئلة الشائعة</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-security">
+          <h4>الأمان</h4>
+          <div class="security-badges">
+            <span class="badge">🔒 HTTPS</span>
+            <span class="badge">🛡️ CSP</span>
+            <span class="badge">🚫 XSS-Protected</span>
+            <span class="badge">⏱️ Rate-Limited</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SaveVideo. جميع الحقوق محفوظة.</p>
+        <p class="disclaimer">هذا الموقع لا يستضيف أي محتوى. نحن نقدم فقط أداة لتحميل الفيديوهات المتاحة علناً.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
